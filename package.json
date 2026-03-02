@@ -1,0 +1,24 @@
+{
+  "name": "tes-mcp-server-sendiri",
+  "version": "1.0.0",
+  "description": "MCP server menggunakan mysql untuk melihat data",
+  "license": "ISC",
+  "author": "Awanda",
+  "type": "module",
+  "main": "build/server.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "mysql": "^2.18.1",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/mysql": "^2.15.27",
+    "@types/node": "^25.3.0",
+    "typescript": "^5.9.3"
+  }
+}
