@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agent Desktop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="glass-container">
+        <header>
+            <div class="drag-region"></div>
+            <h1>AI Agent <span>LLaMA & MCP</span></h1>
+            <div class="window-controls">
+                <button class="win-btn minimize" id="btn-minimize">
+                    <svg width="12" height="12" viewBox="0 0 12 12"><rect y="5" width="12" height="2" fill="currentColor"/></svg>
+                </button>
+                <button class="win-btn maximize" id="btn-maximize">
+                    <svg width="12" height="12" viewBox="0 0 12 12"><rect x="1" y="1" width="10" height="10" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+                </button>
+                <button class="win-btn close" id="btn-close">
+                    <svg width="12" height="12" viewBox="0 0 12 12"><path d="M1 1L11 11M11 1L1 11" stroke="currentColor" stroke-width="1.5"/></svg>
+                </button>
+            </div>
+        </header>
+
+        <div id="chat-container">
+            <div class="message system">
+                <div class="avatar">AI</div>
+                <div class="text">Hello! I'm your local AI agent. How can I help you today?</div>
+            </div>
+        </div>
+
+        <div class="input-area">
+            <textarea id="user-input" placeholder="Type a message or ask about your data..." rows="1"></textarea>
+            <button id="send-btn">
+                <svg class="send-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 2L11 13M22 2L15 22L11 13M11 13L2 9L22 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg class="spinner-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-dasharray="50 20" fill="none"/></svg>
+            </button>
+        </div>
+    </div>
+    <script src="./node_modules/marked/lib/marked.umd.js"></script>
+    <script src="renderer.js"></script>
+</body>
+</html>
